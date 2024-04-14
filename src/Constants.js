@@ -1,0 +1,1 @@
+export const baseServerURL = "http://tomrossner.dev:3000/";
