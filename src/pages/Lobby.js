@@ -3,14 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import { baseServerURL } from "../Constants";
 
-function Lobby({ codeblocks, titles, heading, setCurrentCode, setCurrentSolution, setCurrentID }) {
+function Lobby({ codeblocks, titles, heading, setCurrentCode, setCurrentSolution }) {
   const nav = useNavigate();
 
   const onSelectedItem = (id) => {
     axios.get(`${baseServerURL}/codeblock/${id}`).then((res) => {
       setCurrentCode(res.data.codeBlock.code);
       setCurrentSolution(res.data.codeBlock.solution);
-      setCurrentID(res.data.codeBlock.id);
     });
     nav(`/codeblock/${id}`);
   };
