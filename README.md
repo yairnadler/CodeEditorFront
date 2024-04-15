@@ -1,2 +1,2 @@
-# Frontend of Online Code Editor app
+# Frontend of Online Code Editor App
 
